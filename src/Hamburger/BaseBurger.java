@@ -10,6 +10,7 @@ public class BaseBurger {
     private double base_price;
     private double total_price;
     private String size;
+    private double discount;
 
     BaseBurger(String name, String breadRollType,String meat,double basePrice){
         this.name = name;
@@ -17,6 +18,7 @@ public class BaseBurger {
         this.meat = meat;
         this.base_price = basePrice;
         this.size="normal";
+        this.discount = 0;
     }
     public List<Integer> additions = new ArrayList<>();
     private final double addedPrice = 23;
@@ -55,6 +57,14 @@ public class BaseBurger {
     }
     public void setSize(String size){
         this.size=size;
+    }
+
+    public setDiscount(disc){
+        this.discount = disc;
+    }
+
+    public double getDiscount(){
+        return discount;
     }
 
 }
